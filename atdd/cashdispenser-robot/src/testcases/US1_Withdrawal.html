@@ -6,11 +6,12 @@
 	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.3  (Win32)">
 	<META NAME="CREATED" CONTENT="20090416;11320264">
 	<META NAME="CHANGEDBY" CONTENT="Pawel Duda">
-	<META NAME="CHANGED" CONTENT="20111130;22051749">
+	<META NAME="CHANGED" CONTENT="20111201;7182019">
 	<META NAME="Info 1" CONTENT="">
 	<META NAME="Info 2" CONTENT="">
 	<META NAME="Info 3" CONTENT="">
 	<META NAME="Info 4" CONTENT="">
+	<META NAME="CHANGEDBY" CONTENT="Pawel Duda">
 	<META NAME="CHANGEDBY" CONTENT="Pawel Duda">
 	<META NAME="CHANGEDBY" CONTENT="Pawel Duda">
 	<META NAME="CHANGEDBY" CONTENT="Pawel Duda">
@@ -282,8 +283,8 @@ the balance on the Customer's associated bank Account.</P>
 			</P>
 		</TD>
 		<TD WIDTH=424>
-			<P LANG="zxx"><FONT SIZE=3>Then ${aftDispensed} Should Be
-			Dispensed</FONT></P>
+			<P LANG="zxx"><FONT SIZE=3>Then CashDispenser Should Dispense
+			${aftDispensed}</FONT></P>
 		</TD>
 		<TD WIDTH=147>
 			<P LANG="zxx"><BR>
@@ -308,7 +309,7 @@ the balance on the Customer's associated bank Account.</P>
 			</P>
 		</TD>
 		<TD WIDTH=424>
-			<P LANG="zxx"><FONT SIZE=3>And The Balance of My Account Should Be
+			<P LANG="zxx"><FONT SIZE=3>And My Account Should Have Balance Of
 			${aftAccountBalance}</FONT></P>
 		</TD>
 		<TD WIDTH=147>
@@ -333,16 +334,16 @@ the balance on the Customer's associated bank Account.</P>
 </P>
 <P LANG="zxx" STYLE="margin-bottom: 0cm"><B>STEPS</B></P>
 <TABLE WIDTH=1151 BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0>
-	<COL WIDTH=422>
-	<COL WIDTH=195>
+	<COL WIDTH=404>
+	<COL WIDTH=213>
 	<COL WIDTH=172>
 	<COL WIDTH=199>
 	<COL WIDTH=121>
 	<TR VALIGN=TOP>
-		<TD WIDTH=422 BGCOLOR="#b3b3b3">
+		<TD WIDTH=404 BGCOLOR="#b3b3b3">
 			<P LANG="zxx" ALIGN=LEFT><B>Keyword</B></P>
 		</TD>
-		<TD WIDTH=195 BGCOLOR="#b3b3b3">
+		<TD WIDTH=213 BGCOLOR="#b3b3b3">
 			<P LANG="zxx" ALIGN=LEFT><B>Action</B></P>
 		</TD>
 		<TD WIDTH=172 BGCOLOR="#b3b3b3">
@@ -356,11 +357,11 @@ the balance on the Customer's associated bank Account.</P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
-		<TD WIDTH=422 HEIGHT=24>
-			<P LANG="zxx"><FONT SIZE=3>Given My Account Has a Balance of
+		<TD WIDTH=404 HEIGHT=24>
+			<P LANG="zxx"><FONT SIZE=3>My Account Has a Balance of
 			${befAccountBalance}</FONT></P>
 		</TD>
-		<TD WIDTH=195>
+		<TD WIDTH=213>
 			<P LANG="zxx"><FONT SIZE=3>${account}</FONT></P>
 		</TD>
 		<TD WIDTH=172>
@@ -375,11 +376,11 @@ the balance on the Customer's associated bank Account.</P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
-		<TD WIDTH=422 HEIGHT=24>
+		<TD WIDTH=404 HEIGHT=24>
 			<P LANG="zxx"><BR>
 			</P>
 		</TD>
-		<TD WIDTH=195>
+		<TD WIDTH=213>
 			<P LANG="zxx"><FONT SIZE=3>Set TestVariable</FONT></P>
 		</TD>
 		<TD WIDTH=172>
@@ -394,10 +395,10 @@ the balance on the Customer's associated bank Account.</P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
-		<TD WIDTH=422 HEIGHT=24>
-			<P LANG="zxx"><FONT SIZE=3>When I Withdraw ${withdrawal}</FONT></P>
+		<TD WIDTH=404 HEIGHT=24>
+			<P LANG="zxx"><FONT SIZE=3>I Withdraw ${withdrawal}</FONT></P>
 		</TD>
-		<TD WIDTH=195>
+		<TD WIDTH=213>
 			<P LANG="zxx"><FONT SIZE=3>${cd}</FONT></P>
 		</TD>
 		<TD WIDTH=172>
@@ -413,11 +414,11 @@ the balance on the Customer's associated bank Account.</P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
-		<TD WIDTH=422 HEIGHT=24>
+		<TD WIDTH=404 HEIGHT=24>
 			<P LANG="zxx"><BR>
 			</P>
 		</TD>
-		<TD WIDTH=195>
+		<TD WIDTH=213>
 			<P LANG="zxx"><FONT SIZE=3>Set TestVariable</FONT></P>
 		</TD>
 		<TD WIDTH=172>
@@ -432,11 +433,11 @@ the balance on the Customer's associated bank Account.</P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
-		<TD WIDTH=422 HEIGHT=24>
+		<TD WIDTH=404 HEIGHT=24>
 			<P LANG="zxx"><BR>
 			</P>
 		</TD>
-		<TD WIDTH=195>
+		<TD WIDTH=213>
 			<P LANG="zxx"><FONT SIZE=3>withdraw</FONT></P>
 		</TD>
 		<TD WIDTH=172>
@@ -450,11 +451,11 @@ the balance on the Customer's associated bank Account.</P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
-		<TD WIDTH=422 HEIGHT=24>
-			<P LANG="zxx"><FONT SIZE=3>Then ${aftDispensed} Should Be
-			Dispensed</FONT></P>
+		<TD WIDTH=404 HEIGHT=24>
+			<P LANG="zxx"><FONT SIZE=3>CashDispenser Should Dispense
+			${aftDispensed}</FONT></P>
 		</TD>
-		<TD WIDTH=195>
+		<TD WIDTH=213>
 			<P LANG="zxx"><FONT SIZE=3>Should Be Equal As Numbers</FONT></P>
 		</TD>
 		<TD WIDTH=172>
@@ -469,11 +470,11 @@ the balance on the Customer's associated bank Account.</P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
-		<TD WIDTH=422 HEIGHT=24>
-			<P LANG="zxx"><FONT SIZE=3>And The Balance of My Account Should Be
+		<TD WIDTH=404 HEIGHT=24>
+			<P LANG="zxx"><FONT SIZE=3>My Account Should Have Balance Of
 			${aftAccountBalance}</FONT></P>
 		</TD>
-		<TD WIDTH=195>
+		<TD WIDTH=213>
 			<P LANG="zxx"><FONT SIZE=3>Should Be Equal As Numbers</FONT></P>
 		</TD>
 		<TD WIDTH=172>
@@ -488,11 +489,11 @@ the balance on the Customer's associated bank Account.</P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
-		<TD WIDTH=422 HEIGHT=23>
+		<TD WIDTH=404 HEIGHT=23>
 			<P LANG="zxx"><BR>
 			</P>
 		</TD>
-		<TD WIDTH=195>
+		<TD WIDTH=213>
 			<P LANG="zxx"><FONT SIZE=3>Should Be Equal As Numbers</FONT></P>
 		</TD>
 		<TD WIDTH=172>
