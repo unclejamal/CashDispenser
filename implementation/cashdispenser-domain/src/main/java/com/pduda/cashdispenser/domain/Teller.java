@@ -1,5 +1,6 @@
 package com.pduda.cashdispenser.domain;
 
+/** Controller (entry point to the domain). */
 public class Teller {
 
   private ICashDispenser cashDispenser;
