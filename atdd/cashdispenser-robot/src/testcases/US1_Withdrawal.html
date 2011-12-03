@@ -6,11 +6,12 @@
 	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.3  (Win32)">
 	<META NAME="CREATED" CONTENT="20090416;11320264">
 	<META NAME="CHANGEDBY" CONTENT="Pawel Duda">
-	<META NAME="CHANGED" CONTENT="20111201;7233519">
+	<META NAME="CHANGED" CONTENT="20111203;17444749">
 	<META NAME="Info 1" CONTENT="">
 	<META NAME="Info 2" CONTENT="">
 	<META NAME="Info 3" CONTENT="">
 	<META NAME="Info 4" CONTENT="">
+	<META NAME="CHANGEDBY" CONTENT="Pawel Duda">
 	<META NAME="CHANGEDBY" CONTENT="Pawel Duda">
 	<META NAME="CHANGEDBY" CONTENT="Pawel Duda">
 	<META NAME="CHANGEDBY" CONTENT="Pawel Duda">
@@ -28,7 +29,8 @@
 	</STYLE>
 </HEAD>
 <BODY LANG="de-DE" DIR="LTR">
-<H1 ALIGN=CENTER>US1 &ndash; Successful Withdrawal</H1>
+<H1 ALIGN=CENTER>US1 &ndash; Withdrawal</H1>
+<P LANG="zxx" ALIGN=CENTER>succesful withdrawal</P>
 <H2 CLASS="western">Description</H2>
 <P LANG="zxx" STYLE="margin-bottom: 0cm">Customer withdraws money by
 using a Cash dispenser. First they have to authenticate themselves
@@ -79,19 +81,19 @@ the balance on the Customer's associated bank Account.</P>
 			<P LANG="zxx" ALIGN=LEFT><B>Scenario</B></P>
 		</TD>
 		<TD WIDTH=176 BGCOLOR="#b3b3b3">
-			<P LANG="zxx" ALIGN=LEFT><B>BEFORE:</B></P>
+			<P LANG="zxx" ALIGN=LEFT><B>GIVEN:</B></P>
 			<P LANG="zxx" ALIGN=LEFT><B>account bal</B></P>
 		</TD>
 		<TD WIDTH=171 BGCOLOR="#b3b3b3">
-			<P LANG="zxx" ALIGN=LEFT><B>SCENARIO  PARAM:</B></P>
+			<P LANG="zxx" ALIGN=LEFT><B>ACTION:</B></P>
 			<P LANG="zxx" ALIGN=LEFT><B>withdrawal</B></P>
 		</TD>
 		<TD WIDTH=179 BGCOLOR="#b3b3b3">
-			<P LANG="zxx" ALIGN=LEFT><B>AFTER:</B></P>
+			<P LANG="zxx" ALIGN=LEFT><B>EXPECTED:</B></P>
 			<P LANG="zxx" ALIGN=LEFT><B>dispensed</B></P>
 		</TD>
 		<TD WIDTH=179 BGCOLOR="#b3b3b3">
-			<P LANG="zxx" ALIGN=LEFT><B>AFTER:</B></P>
+			<P LANG="zxx" ALIGN=LEFT><B>EXPECTED:</B></P>
 			<P LANG="zxx" ALIGN=LEFT><B>account bal</B></P>
 		</TD>
 	</TR>
@@ -194,16 +196,20 @@ the balance on the Customer's associated bank Account.</P>
 			<P LANG="zxx" ALIGN=LEFT><B>Step</B></P>
 		</TD>
 		<TD WIDTH=147 BGCOLOR="#b3b3b3">
-			<P LANG="zxx" ALIGN=LEFT><B>Argument</B></P>
+			<P LANG="zxx" ALIGN=LEFT><B>GIVEN:</B></P>
+			<P LANG="zxx" ALIGN=LEFT><B>account bal</B></P>
 		</TD>
 		<TD WIDTH=100 BGCOLOR="#b3b3b3">
-			<P LANG="zxx" ALIGN=LEFT><B>Argument</B></P>
+			<P LANG="zxx" ALIGN=LEFT><B>ACTION:</B></P>
+			<P LANG="zxx" ALIGN=LEFT><B>withdrawal</B></P>
 		</TD>
 		<TD WIDTH=116 BGCOLOR="#b3b3b3">
-			<P LANG="zxx" ALIGN=LEFT><B>Argument</B></P>
+			<P LANG="zxx" ALIGN=LEFT><B>EXPECTED:</B></P>
+			<P LANG="zxx" ALIGN=LEFT><B>dispensed</B></P>
 		</TD>
 		<TD WIDTH=153 BGCOLOR="#b3b3b3">
-			<P LANG="zxx" ALIGN=LEFT><B>Argument</B></P>
+			<P LANG="zxx" ALIGN=LEFT><B>EXPECTED:</B></P>
+			<P LANG="zxx" ALIGN=LEFT><B>account bal</B></P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -214,16 +220,16 @@ the balance on the Customer's associated bank Account.</P>
 			<P LANG="zxx"><FONT SIZE=3>[Arguments]</FONT></P>
 		</TD>
 		<TD WIDTH=147>
-			<P LANG="zxx"><FONT SIZE=3>${befAccountBalance}</FONT></P>
+			<P LANG="zxx"><FONT SIZE=3>${givAccountBalance}</FONT></P>
 		</TD>
 		<TD WIDTH=100>
 			<P LANG="zxx"><FONT SIZE=3>${withdrawal}</FONT></P>
 		</TD>
 		<TD WIDTH=116>
-			<P LANG="zxx"><FONT SIZE=3>${aftDispensed}</FONT></P>
+			<P LANG="zxx"><FONT SIZE=3>${expDispensed}</FONT></P>
 		</TD>
 		<TD WIDTH=153>
-			<P LANG="zxx"><FONT SIZE=3>${aftAccountBalance}</FONT></P>
+			<P LANG="zxx"><FONT SIZE=3>${expAccountBalance}</FONT></P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
@@ -233,7 +239,7 @@ the balance on the Customer's associated bank Account.</P>
 		</TD>
 		<TD WIDTH=424>
 			<P LANG="zxx"><FONT SIZE=3>Given My Account Has a Balance of
-			${befAccountBalance}</FONT></P>
+			${givAccountBalance}</FONT></P>
 		</TD>
 		<TD WIDTH=147>
 			<P LANG="zxx"><BR>
@@ -284,7 +290,7 @@ the balance on the Customer's associated bank Account.</P>
 		</TD>
 		<TD WIDTH=424>
 			<P LANG="zxx"><FONT SIZE=3>Then CashDispenser Should Dispense
-			${aftDispensed}</FONT></P>
+			${expDispensed}</FONT></P>
 		</TD>
 		<TD WIDTH=147>
 			<P LANG="zxx"><BR>
@@ -310,7 +316,7 @@ the balance on the Customer's associated bank Account.</P>
 		</TD>
 		<TD WIDTH=424>
 			<P LANG="zxx"><FONT SIZE=3>And My Account Should Have Balance Of
-			${aftAccountBalance}</FONT></P>
+			${expAccountBalance}</FONT></P>
 		</TD>
 		<TD WIDTH=147>
 			<P LANG="zxx"><BR>
@@ -344,22 +350,26 @@ the balance on the Customer's associated bank Account.</P>
 			<P LANG="zxx" ALIGN=LEFT><B>Keyword</B></P>
 		</TD>
 		<TD WIDTH=213 BGCOLOR="#b3b3b3">
-			<P LANG="zxx" ALIGN=LEFT><B>Action</B></P>
+			<P LANG="zxx" ALIGN=LEFT><BR>
+			</P>
 		</TD>
 		<TD WIDTH=172 BGCOLOR="#b3b3b3">
-			<P LANG="zxx" ALIGN=LEFT><B>Argument</B></P>
+			<P LANG="zxx" ALIGN=LEFT><BR>
+			</P>
 		</TD>
 		<TD WIDTH=199 BGCOLOR="#b3b3b3">
-			<P LANG="zxx" ALIGN=LEFT><B>Argument</B></P>
+			<P LANG="zxx" ALIGN=LEFT><BR>
+			</P>
 		</TD>
 		<TD WIDTH=121 BGCOLOR="#b3b3b3">
-			<P LANG="zxx" ALIGN=LEFT><B>Argument</B></P>
+			<P LANG="zxx" ALIGN=LEFT><BR>
+			</P>
 		</TD>
 	</TR>
 	<TR VALIGN=TOP>
 		<TD WIDTH=404 HEIGHT=24>
 			<P LANG="zxx"><FONT SIZE=3>My Account Has a Balance of
-			${befAccountBalance}</FONT></P>
+			${givAccountBalance}</FONT></P>
 		</TD>
 		<TD WIDTH=213>
 			<P LANG="zxx"><FONT SIZE=3>${account}</FONT></P>
@@ -368,7 +378,7 @@ the balance on the Customer's associated bank Account.</P>
 			<P LANG="zxx"><FONT SIZE=3>My account</FONT></P>
 		</TD>
 		<TD WIDTH=199>
-			<P LANG="zxx"><FONT SIZE=3>${befAccountBalance}</FONT></P>
+			<P LANG="zxx"><FONT SIZE=3>${givAccountBalance}</FONT></P>
 		</TD>
 		<TD WIDTH=121>
 			<P LANG="zxx"><BR>
@@ -453,13 +463,13 @@ the balance on the Customer's associated bank Account.</P>
 	<TR VALIGN=TOP>
 		<TD WIDTH=404 HEIGHT=24>
 			<P LANG="zxx"><FONT SIZE=3>CashDispenser Should Dispense
-			${aftDispensed}</FONT></P>
+			${expDispensed}</FONT></P>
 		</TD>
 		<TD WIDTH=213>
 			<P LANG="zxx"><FONT SIZE=3>Should Be Equal As Numbers</FONT></P>
 		</TD>
 		<TD WIDTH=172>
-			<P LANG="zxx"><FONT SIZE=3>${aftDispensed}</FONT></P>
+			<P LANG="zxx"><FONT SIZE=3>${expDispensed}</FONT></P>
 		</TD>
 		<TD WIDTH=199>
 			<P LANG="zxx"><FONT SIZE=3>${cashDispenser.contents}</FONT></P>
@@ -472,13 +482,13 @@ the balance on the Customer's associated bank Account.</P>
 	<TR VALIGN=TOP>
 		<TD WIDTH=404 HEIGHT=24>
 			<P LANG="zxx"><FONT SIZE=3>My Account Should Have Balance Of
-			${aftAccountBalance}</FONT></P>
+			${expAccountBalance}</FONT></P>
 		</TD>
 		<TD WIDTH=213>
 			<P LANG="zxx"><FONT SIZE=3>Should Be Equal As Numbers</FONT></P>
 		</TD>
 		<TD WIDTH=172>
-			<P LANG="zxx"><FONT SIZE=3>${aftAccountBalance}</FONT></P>
+			<P LANG="zxx"><FONT SIZE=3>${expAccountBalance}</FONT></P>
 		</TD>
 		<TD WIDTH=199>
 			<P LANG="zxx"><FONT SIZE=3>${myAccount.balance}</FONT></P>
@@ -497,7 +507,7 @@ the balance on the Customer's associated bank Account.</P>
 			<P LANG="zxx"><FONT SIZE=3>Should Be Equal As Numbers</FONT></P>
 		</TD>
 		<TD WIDTH=172>
-			<P LANG="zxx"><FONT SIZE=3>${aftAccountBalance}</FONT></P>
+			<P LANG="zxx"><FONT SIZE=3>${expAccountBalance}</FONT></P>
 		</TD>
 		<TD WIDTH=199>
 			<P LANG="zxx"><FONT SIZE=3>${myAccount.balance}</FONT></P>
